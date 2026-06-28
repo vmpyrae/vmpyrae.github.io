@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>vmpyrae · official website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container">
+
+    <div class="header-row">
+      <img src="/assets/banner.gif" alt="vmpyrae banner" class="logo-inverted">
+      <div class="title-block">
+        <h1>vmpyrae Place (my lil corner of the web)</h1>
+        <p class="sub-small" style="background:none; border:none; padding:0; margin-top:5px;">Web dev fullstack</p>
+      </div>
+    </div>
+
+    <div class="profile-container">
+      <img src="/assets/vmpyrae.png" alt="vmpyrae portrait" class="pfp-image">
+      <div class="bio-text">
+        <p>17, Web dev and bored, jus trying to make the world a better place. I'll probably start a clothing brand someday—if I do, I'll drop the link here.</p>
+        <p>I like wearing baggy pants, putting together clean outfits, and looking good without overthinking it. Winter > summer every time. This page is just here for fun, nothing too serious—just random thoughts, things I like, and whatever I feel like posting.</p>
+      </div>
+    </div>
+
+    <div class="divider">
+          <img src="/assets/vampfang-divider.png" alt="vamp fang divider">
+    </div>
+
+    <div class="banners-stack">
+      <a href="" target="_blank" rel="noopener noreferrer" class="banner-link">
+        <img src="/assets/paypal.png" alt="Donate via Paypal">
+      </a>
+      <a href="https://discord.com/users/935867927788400640" target="_blank" rel="noopener noreferrer" class="banner-link">
+        <img src="/assets/discord.png" alt="Talk via Discord">
+      </a>
+    </div>
+
+    <div class="divider">
+      <img src="/assets/chairdivider.png" alt="chair divider">
+    </div>
+
+      <div class="slideshow-wrapper">
+      <a href="" target="_blank" rel="noopener noreferrer" class="slideshow-link" id="slideshowLink">
+        <img src="" alt="slideshow banner (tba)" id="slideshowImage">
+      </a>
+    </div>
+
+    <div class="footer-row">
+      <a href="https://github.com/vmpyrae" class="footer-button" title="vmpyrae">
+        <img src="/assets/vmpyrae-blinkie.gif" alt="vmpyrae Blinkie">
+      </a>
+      <a href="https://www.candia.fr/produit/candyup-gout-vanille/" class="footer-button" title="CandyUp Vanille">
+        <img src="/assets/candyup-blinkie.gif" alt="CandyUp Blinkie">
+      </a>
+      <a href="https://www.roblox.com/users/1844862119/profile" class="footer-button" title="Roblox">
+        <img src="/assets/roblox.gif" alt="Roblox Blinkie">
+      </a>
+    </div>
+
+  </div>
+
+   <script>
+    (function() {
+      const slides = [
+        { img: "", link: "" },
+        { img: "", link: "" },
+        { img: "", link: "" },
+        { img: "", link: "" }
+      ];
+ 
+      const imgEl = document.getElementById('slideshowImage');
+      const linkEl = document.getElementById('slideshowLink');
+      if (!imgEl || !linkEl) return;
+ 
+      let i = 0;
+      setInterval(() => {
+        i = (i + 1) % slides.length;
+        imgEl.src = slides[i].img;
+        linkEl.href = slides[i].link;
+      }, 7000);
+    })();
+  </script>
+</body>
+</html>

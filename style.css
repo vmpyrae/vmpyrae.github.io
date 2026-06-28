@@ -1,0 +1,259 @@
+/* ==============================
+   vmpyrae · style.css
+   ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/assets/monsterbg.png');
+  background-repeat: repeat;
+  background-size: 175px;
+  font-family: 'Special Elite', monospace, courier;
+  color: #ffffff;
+  margin: 0;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* --- Conteneur principal --- */
+.site-container {
+  max-width: 1100px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px;
+  gap: 22px;
+}
+
+/* Bordure + fond noir sur tous les enfants directs du container */
+.site-container > * {
+  border: 1px solid #ffffff;
+  background: #000000;
+  padding: 8px;
+}
+
+/* --- Typographie générale --- */
+p, h1, h2, h3, h4, h5, h6 {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 6px 8px;
+  margin: 0;
+  border: 1px solid #ffffff;
+  line-height: 1.5;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+img {
+  image-rendering: auto;
+}
+
+/* --- Ligne header (logo + titre) --- */
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  background-color: #000000;
+}
+
+.logo-inverted {
+  max-width: 280px;
+  height: auto;
+  display: block;
+  border: 1px solid #ffffff;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px;
+}
+
+.title-block h1 {
+  font-size: 2.2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 6px;
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.title-block .sub-small {
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #dddddd;
+}
+
+/* --- Section profil (photo + bio) --- */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border: 1px solid #ffffff;
+  padding: 12px;
+  background: #000000;
+  flex-wrap: wrap;
+}
+
+.pfp-image {
+  height: auto;
+  border: 1px solid #ffffff;
+  display: block;
+  flex-shrink: 0;
+}
+
+.bio-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bio-text p {
+  background: #000000;
+  border: 1px solid #ffffff;
+  padding: 8px 10px;
+}
+
+/* --- Pile de bannières : pas de boîte visible --- */
+.banners-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.banner-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  transition: filter 0.2s;
+}
+
+.banner-link:hover img {
+  filter: brightness(1.05);
+}
+
+/* --- Séparateurs : centrés, sans boîte --- */
+.divider {
+  background: transparent;
+  border: none;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.divider img {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  background: transparent;
+  border: none;
+}
+
+/* --- Slideshow --- */
+.slideshow-wrapper {
+  border: 1px solid #f3d8d8;
+  background-color: #1b1a1d;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slideshow-link img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #f3d8d8;
+  background-color: #1b1a1d;
+}
+
+/* --- Footer blinkies : pas de boîte visible --- */
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  border: none;
+  padding: 0;
+  background: transparent;
+  margin-top: 4px;
+}
+
+.footer-button {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.footer-button:hover {
+  transform: scale(2);
+}
+
+.footer-button img {
+  display: block;
+  width: 100px;
+  height: 40px;
+  image-rendering: pixelated;
+}
+
+/* --- Responsive mobile --- */
+@media (max-width: 650px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo-inverted {
+    max-width: 200px;
+  }
+  .profile-container {
+    flex-direction: column;
+  }
+  .pfp-image {
+    width: 100px;
+  }
+}
